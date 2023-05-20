@@ -3,13 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Toggle Boxes</title>
+        <title>Comment Section</title>
         <link rel="stylesheet" href="main.css">
     </head>
-    <header></header>
-    <body id="boxContainer">
-        <div id="appendBox"></div>
         <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
         <script src="script.js"></script>
-    </body>
+        <div id="body"></div>
+        <header>Trying to decide a career path? Programming is the move. <div>Change my mind.</div></header>
+        <div id="commentSection">
+            <div id="appendComment"></div>
+        </div>    
+    <div id='footer'>
+        <div id="userInput">
+            <label for="displayName"></label>
+            <input type="text" id="displayName" placeholder="Display Name" style="font-size: 20px ;height:35px; width: 125px;">
+            <input type="text" id="userComment" placeholder="Comment" style="font-size: 20px ;height:35px; width: 1400px; color: #CACBC8">
+            <button type="button" id="myButton" style="font-size: 20px ;height:35px; background-color: white; border: none; color: #8DD8D5;">Submit</button>
+        </div>
+    </div>
 </html>

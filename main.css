@@ -1,26 +1,79 @@
 body, html, head {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
   }
-  #notClicked.clicked {
-    background-color: lightgrey;
-    height: 100px;
-    width: 100px; 
-  }
-  #notClicked {
-    background-color: darkslategrey;
-    height: 100px;
-    width: 100px; 
-
-  }
-  #appendBox{
-    margin-top: 250px;
-    width: 430px;
-    height: 490px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 125px);
-  }
+body {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
 header {
-    margin-bottom: 250px;
-  }
+  font-size: 50px;
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  z-index: 3;
+  width: 1710px;
+ 
+}
+html {
+  background-color: #ccc;
+}
+#commentSection {
+  height: 1000px;
+  width: 1750px;
+  background-color: #ADADAD;
+}
+#footer {
+  height: 100px;
+  width: 1750px;
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+}
+input {
+  border: 1px solid #CACBC8;
+  border-radius: 5px;
+  color: #CACBC8;
+}
+button {
+  border: 1px solid #CACBC8;
+  border-radius: 5px;
+  display: flex;
+}
+#userInput {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+#appendComment {
+  margin-top: 156px;
+  width: 1800px;
+  display: flex;
+  flex-direction: column;
+}
+.userComment {
+  background-color: #E6E6E6;
+  height: 100px;
+  width: 1700px;
+  margin: 25px;
+  margin-bottom: 0;
+}
+.icon{
+  height: 75px;
+  width: 75px;
+}
+.displayNameID {
+  font-size: 45px;
+}
+#hiddenSection {
+  background-color: #E6E6E6;
+  width: 1680px;
+  padding: 10px;
+  display: none;
+  margin-left: 25px;
+}
