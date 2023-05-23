@@ -55,6 +55,7 @@ button {
   width: 1800px;
   display: flex;
   flex-direction: column;
+  height: fit-content
 }
 .userComment {
   background-color: #E6E6E6;

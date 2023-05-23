@@ -5,15 +5,14 @@ $(document).ready(function(){
     $("#myButton").click(function(){
        let dispName = $('#displayName').val();
        let comm = $('#userComment').val();
+       if (dispName.length === 0 && comm.length === 0) {
+
+       }
+       else {
        let hidComm = $('#editComment').val()
        let commLength = $(comm).length
-       
-       //if ($(comm).length === 0){
-         //  alert('Please enter Display Name and Comment')
-       //}
-       // else {
-        //let comment =  $('#appendComment').append('<div class="userComment">' +'<img id="icon" src="images/icon.png">'+ '<div class="displayNameId">' + dispName + '</div>'+ ' ' + '<div id="displayNameId">' + comm + '</div>' +'<button id= "editButton" class = "button" >Edit' +'<button id= "deleteButton" class = "button">Delete');
-
+       $('#userComment').val('')
+       $('#displayName').val('')
         let newComment = $('<div class="userComment"></div>')
         
         newComment.append('<img id="icon" src="images/icon.png">');
@@ -49,7 +48,7 @@ $(document).ready(function(){
             })
             newComment.append(editButton)
 
- 
+        
 
         let editSubmit = $('<button type="button" class="myHiddenButton" style="display: none;font-size: 20px ;height:35px; background-color: white; border: none; color: #8DD8D5;">Submit</button>')
         let commentChanger =  $('.editComment').val() 
@@ -57,26 +56,16 @@ $(document).ready(function(){
         console.log(commentChanger)
             $(document).on('click', '.myHiddenButton', function(){
                 
-               
-                commentChanger = $(this).parents().prev().find('#comment').text() ,
+                let test = $(this).prev().val()
+                 $(this).parents().prev().find('#comment').text(test) ,
+                 
                 //newComment.append('<div id="comment">' + $('.editComment').val() + '</div>')
     
                 $(this).parent().find('.editComment').css({'display': 'none'}),
                 $(this).parent().find('.myHiddenButton').css({'display': 'none'})
-                
-             //   hiddenText.css({
-             //       'display': 'none'
-             //   }),
-             //   editSubmit.css({
-             //       'display': 'none'
-             //   }),
-             //   $('#hiddenSection').css({
-             //       'display': 'none'
-             //   })
-                
-               // commentChanger.text(hidComm)
+               
             })
-            
+
         
         let hiddenText = $('<input type="text" class="editComment" placeholder="Edit Comment" style= "display: none; font-size: 20px ;height:35px; width: 750px; color: #CACBC8"></input>')
         let editCommentVar = $('<div id="hiddenSection"></div>')
@@ -136,17 +125,17 @@ $(document).ready(function(){
             'float': 'right',
             'margin-top': '36px',
         })
-        editCommentVar.find('#editComment').css({
-            'width': '800px',
+        editCommentVar.find('.editComment').css({
+            'width': '1400px',
             'float': 'left',
             'background-color': '#E6E6E6',
             'margin-left': '90px',
             'height': '25px'
         })
-        editCommentVar.find('#myHiddenButton').css({
+        editCommentVar.find('.myHiddenButton').css({
             'width': '90px',
             'float': 'right',
-            'margin-right': '90px',
+           // 'margin-right': '35px',
             'background-color': '#E6E6E6'
         })
         editCommentVar.find('#hiddenSection').css({
@@ -157,7 +146,7 @@ $(document).ready(function(){
         })
         //let editButton = $(editButtonPlace)
 
-
+    }
         })
        // }
     });
